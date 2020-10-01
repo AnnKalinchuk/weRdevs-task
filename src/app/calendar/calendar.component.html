@@ -1,0 +1,37 @@
+<div class="calendar">
+  <div class="calendar__selector">
+    <p>
+      <i class="material-icons" (click)="go(-1)">keyboard_arrow_left</i>
+      <span>{{ dateService.date | async | moment | uppercase}}</span>
+      <i class="material-icons" (click)="go(1)">keyboard_arrow_right</i>
+    </p>
+  </div>
+  <div class="calendar__inner">
+    <table>
+      <tbody>
+        <tr *ngFor="let week of calendar">
+          <td *ngFor="let day of week.days"
+              [class.disabled]="day.disabled"
+              (click)="onSelect(day.value)"
+          >
+            <span
+              [class.active]="day.active" [class.selected]="day.selected"
+            >{{day.value | moment: 'DD'}}</span>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>S</th>
+          <th>M</th>
+          <th>T</th>
+          <th>W</th>
+          <th>T</th>
+          <th>F</th>
+          <th>S</th>
+        </tr>
+
+      </tfoot>
+    </table>
+  </div>
+</div>

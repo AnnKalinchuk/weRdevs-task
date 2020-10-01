@@ -1,0 +1,52 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.home__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: $main-height;
+
+  background: url('../../assets/images/artboard.png') no-repeat  ;
+  background-size: cover;
+
+}
+
+.home__inner {
+  display: flex;
+  justify-content: flex-end;
+}
+.home__text {
+  text-align: right;
+  max-width: 554px;
+  padding-right: 32px;
+
+  min-height: $main-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    color: $primary-color;
+    font-size: 50px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    line-height: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 30px;
+    color: #DFDFDF;
+    letter-spacing: 0.6px;
+    line-height: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-height: 720px) and (max-width: 1200px) {
+  .home__text {
+    padding-top: 66px;
+  }
+}

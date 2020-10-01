@@ -1,0 +1,27 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.about__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: $main-height;
+
+}
+.about__inner {
+  color: #3d3d3d;
+  padding: 20px 120px;
+}
+
+p {
+    letter-spacing: 0.4px;
+    font-size: 20px;
+    font-family: 'Rubic' ;
+    margin: 34px 0;
+}
+
+h4 {
+  font-size: 34px;
+  font-weight: bold;
+}
+

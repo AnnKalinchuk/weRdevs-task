@@ -1,0 +1,23 @@
+@import '../../../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+
+.date__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+  color: #A2A2A2;
+  font-size: 20px;
+}
+
+input {
+  border: 2px solid $primary-color;
+  padding: 10px 5px 10px 20px;
+  color: #3d3d3d;
+
+  &:disabled {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+
+.logo {
+  img {
+    width: 165px;
+    height: 50px;
+  }
+}
+.header__inner {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  li {
+    display: inline;
+    margin-left: 34px;
+    text-transform: uppercase;
+
+  }
+
+  a {
+    color: #3d3d3d;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 0.56px;
+    position: relative;
+
+    &:hover:after {
+       position:absolute;
+       bottom: -5;
+       left: 45%;
+       width: 14px;
+       height: 14px;
+       content: "";
+       background-color: $primary-color;
+       display: block;
+       border-radius: 10px;
+    }
+  }
+}
+

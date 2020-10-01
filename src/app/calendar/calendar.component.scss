@@ -1,0 +1,85 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.calendar {
+    background-color: #272829;
+    min-height: $main-height;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.calendar__selector {
+  margin-bottom: 20px;
+  color:#DFDFDF;
+}
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    margin: 0 2rem;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+  }
+
+  i {
+    cursor: pointer;
+  }
+}
+
+
+table {
+  width: 100%;
+  font-size: 23px;
+  margin-bottom: 1rem;
+  color:#DFDFDF;
+  border-collapse: collapse;
+
+  border: 1px solid #DFDFDF;
+  border-right-width:0px;
+  border-left-width:0px;
+
+  tfoot {
+    border-top: 1px solid #dddddd;
+  }
+
+
+  th, td {
+    padding: 1rem 1rem;
+  }
+
+  td {
+    text-align: center;
+    transition: all .2s;
+
+    &.disabled {
+      opacity: .5;
+    }
+
+    &:hover:not(.disabled) {
+      background: rgb(80, 77, 77);
+      cursor: pointer;
+    }
+  }
+
+  .selected {
+    background: $primary-color;
+    color: black;
+  }
+}
+
+
+@media (max-height: 720px) and (max-width: 1200px) {
+  .calendar {
+    min-width: 500px;
+  }
+
+  table {
+    font-size: 18px;
+  }
+}
